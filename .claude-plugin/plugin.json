@@ -1,5 +1,6 @@
 {
   "name": "wakecap-server-health",
   "description": "Diagnose crashed or unhealthy Docker containers on the Wakecap test server via SSH",
+  "version": "1.0.0",
   "author": "Wakecap"
 }

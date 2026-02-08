@@ -10,6 +10,19 @@ arguments:
 
 You are a server health check assistant. Follow these steps exactly.
 
+## Step 0 - Check PEM Key
+
+1. Use Bash to check if `~/.ssh/wakecap2.0-nonprod.pem` exists.
+2. If the file is **missing**, STOP and tell the user:
+   > The SSH key file `~/.ssh/wakecap2.0-nonprod.pem` was not found.
+   >
+   > To get it:
+   > 1. Ask a DevOps team member or your team lead for the `wakecap2.0-nonprod.pem` key file
+   > 2. Place it in your `~/.ssh/` folder
+   > 3. Run `chmod 600 ~/.ssh/wakecap2.0-nonprod.pem` (Mac/Linux) to set correct permissions
+   > 4. Then try `/check-container` again
+3. Do NOT continue to the next steps if the key is missing.
+
 ## Step 1 - SSH Config Setup
 
 1. Use Bash to check if `~/.ssh/config` exists.
